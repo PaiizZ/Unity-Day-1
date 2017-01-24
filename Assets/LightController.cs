@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class LightController : MonoBehaviour {
-
+	public GameObject lightObject;
+	float i = 0 ;
 	// Use this for initialization
 	void Start () {
 	
@@ -10,11 +11,15 @@ public class LightController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		Debug.Log (Time.time +"  "+i);
+		i++;
 	}
 
 	void OnGUI () {
-		GUI.Button (new Rect (Screen.width/2-25, Screen.height/2-25, 50, 50), "Button");
+		if (GUI.Button (new Rect (Screen.width/2-50, Screen.height/2-50, 100, 100), lightObject.GetComponent<Light>().enabled?"Turn Off":"Turn On")) {
+			Debug.Log(Time.time + "Hello world");
+			lightObject.GetComponent<Light> ().enabled = !lightObject.GetComponent<Light> ().enabled;
 
+		}
 	}
 }
