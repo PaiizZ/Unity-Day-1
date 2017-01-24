@@ -12,4 +12,9 @@ public class LightController : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	void OnGUI () {
+		GUI.Button (new Rect (Screen.width/2-25, Screen.height/2-25, 50, 50), "Button");
+
+	}
 }

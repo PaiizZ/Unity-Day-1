@@ -1,0 +1,17 @@
+/Users/PaiizZ/Documents/Unity/KU-Day-1/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/PaiizZ/Documents/Unity/KU-Day-1/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/PaiizZ/Documents/Unity/KU-Day-1/obj/Debug/Assembly-CSharp.dll
+/Users/PaiizZ/Documents/Unity/KU-Day-1/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/PaiizZ/Documents/Unity/KU-Day-1/Temp/bin/Debug/UnityEngine.dll
+/Users/PaiizZ/Documents/Unity/KU-Day-1/Temp/bin/Debug/UnityEditor.dll
+/Users/PaiizZ/Documents/Unity/KU-Day-1/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/PaiizZ/Documents/Unity/KU-Day-1/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/PaiizZ/Documents/Unity/KU-Day-1/Temp/bin/Debug/Mono.Cecil.dll
+/Users/PaiizZ/Documents/Unity/KU-Day-1/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/PaiizZ/Documents/Unity/KU-Day-1/Temp/bin/Debug/Unity.DataContract.dll
+/Users/PaiizZ/Documents/Unity/KU-Day-1/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/PaiizZ/Documents/Unity/KU-Day-1/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/PaiizZ/Documents/Unity/KU-Day-1/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/PaiizZ/Documents/Unity/KU-Day-1/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/PaiizZ/Documents/Unity/KU-Day-1/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/PaiizZ/Documents/Unity/KU-Day-1/Temp/bin/Debug/Mono.Cecil.Mdb.dll
