@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SpaceshipController : MonoBehaviour {
 
+	public GameObject myBullet;
 	// Use this for initialization
 	void Start () {
 	
@@ -15,6 +16,10 @@ public class SpaceshipController : MonoBehaviour {
 		} else if (Input.GetAxis("Vertical") != 0) {
 			this.gameObject.transform.Translate (Input.GetAxis ("Vertical") * Vector3.up);
 		} 
+
+		if (Input.GetKey(KeyCode.Space)) {
+			Instantiate (myBullet, this.gameObject.transform.position,Quaternion.identity);
+		}
 	}
 
 }
