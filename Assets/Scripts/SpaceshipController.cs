@@ -17,7 +17,7 @@ public class SpaceshipController : MonoBehaviour {
 			this.gameObject.transform.Translate (Input.GetAxis ("Vertical") * Vector3.up);
 		} 
 
-		if (Input.GetKey(KeyCode.Space)) {
+		if (Input.GetKeyDown(KeyCode.Space)) {
 			Instantiate (myBullet, this.gameObject.transform.position,Quaternion.identity);
 		}
 	}
