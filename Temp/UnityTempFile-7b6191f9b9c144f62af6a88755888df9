@@ -79,7 +79,9 @@
 -define:UNITY_EDITOR_OSX
 -define:UNITY_TEAM_LICENSE
 'Assets/Scripts/BulletController.cs'
+'Assets/Scripts/EnemyController.cs'
 'Assets/Scripts/LightController.cs'
 'Assets/Scripts/SpaceshipController.cs'
+'Assets/Scripts/SpawnEnemyController.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'
