@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class EnemyController : MonoBehaviour {
-	public AudioClip myExplostion;
+	public AudioClip myExplostionBoom;
 	public bool restart;
 	// Use this for initialization
 	void Start () {
@@ -21,10 +21,13 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		Destroy (other.gameObject);
-		this.restart = true;
-		this.gameObject.GetComponent<AudioSource> ().clip = myExplostion;
-		this.gameObject.GetComponent<AudioSource> ().Play ();
+		if (other.gameObject.tag == "Player") {
+			AudioSource.PlayClipAtPoint (myExplostionBoom, gameObject.transform.position);
+			Destroy (other.gameObject);
+			this.restart = true;
+//			this.gameObject.GetComponent<AudioSource> ().Play ();
+		}
+			
 	}
 
 	bool getRestart(){
