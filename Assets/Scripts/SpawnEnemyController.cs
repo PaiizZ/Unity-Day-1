@@ -8,8 +8,10 @@ public class SpawnEnemyController : MonoBehaviour {
 	private float y;
 	private float z;
 	private Vector3 positionSpawn;
+	public ScoreText scoreText;
 	// Use this for initialization
 	void Start () {
+		scoreText = ScoreText.instance;
 		StartCoroutine (SpawnEnemy (1f));
 	}
 	
@@ -21,6 +23,7 @@ public class SpawnEnemyController : MonoBehaviour {
 
 
 	IEnumerator SpawnEnemy(float waitTime) {
+
 		x = Random.Range (-4, 4);
 		y = 4;
 		z = 0;
@@ -29,7 +32,13 @@ public class SpawnEnemyController : MonoBehaviour {
 		Instantiate (myEnemy, positionSpawn, Quaternion.identity);
 
 		yield return new WaitForSeconds(waitTime);
-		StartCoroutine (SpawnEnemy (1f));
+		if (scoreText.getScore () <= 10) {
+			StartCoroutine (SpawnEnemy (1f));
+		} else if (scoreText.getScore () <= 20) {
+			StartCoroutine (SpawnEnemy (0.7f));
+		} else {
+			StartCoroutine (SpawnEnemy (0.3f));
+		}
 	}
 		
 }

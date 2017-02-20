@@ -25,6 +25,9 @@ public class ScoreText : MonoBehaviour {
 				
 	}
 
+	public int getScore(){
+		return this.score;
+	}
 
 	public void AddScore(int val){
 		score += val;
