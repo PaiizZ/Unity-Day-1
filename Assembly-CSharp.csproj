@@ -45,12 +45,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ButtonController.cs" />
      <Compile Include="Assets\Scripts\BulletController.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\LightController.cs" />
      <Compile Include="Assets\Scripts\ScoreText.cs" />
      <Compile Include="Assets\Scripts\SpaceshipController.cs" />
      <Compile Include="Assets\Scripts\SpawnEnemyController.cs" />
+     <Compile Include="Assets\Scripts\olo.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>

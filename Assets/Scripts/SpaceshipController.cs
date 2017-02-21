@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -13,9 +14,8 @@ public class SpaceshipController : MonoBehaviour {
 	public float speed;
 	public Text gameOverText;
 	public Boundary boundary;
-	public bool restart;
 	void Start () {
-//		gameOverText = GetComponent<Text>();
+//		gameOverText.text = GetComponent<Text>();
 		if (instance==null) {
 			instance = this;
 		} else if (instance != this) {
@@ -29,17 +29,7 @@ public class SpaceshipController : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Space)) {
 			Instantiate (myBullet, this.gameObject.transform.position,Quaternion.identity);
 		}
-		if (restart) {
-			Debug.Log ("eiei restart");
-			gameOverText.text = "Game Over";
-			if (Input.GetKeyDown (KeyCode.R))
-			{
-				Debug.Log ("eiei");
-				gameOverText.text = "kjkjjkk";
-				Application.LoadLevel (Application.loadedLevel);
-				this.restart = false;
-			}
-		}
+
 	}
 
 	void FixedUpdate(){
@@ -55,10 +45,6 @@ public class SpaceshipController : MonoBehaviour {
 			0.0f
 		);
 			
-	}
-
-	public void setRestart(bool re){
-		this.restart = re;
 	}
 		
 }

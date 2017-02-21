@@ -9,17 +9,17 @@ public class BulletController : MonoBehaviour {
 	public ScoreText scoreText;
 	// Use this for initialization
 
-		
+
 	void Start () {
-//		scoreText = GetComponent <Text> ();
+		//		scoreText = GetComponent <Text> ();
 		scoreText = ScoreText.instance;
 		score = 0;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		this.gameObject.transform.Translate (Vector3.up * Time.deltaTime * 10f);
-//		scoreText.text = "Score: "+score;
+		//		scoreText.text = "Score: "+score;
 		if (this.gameObject.transform.position.y >= 15f) {
 			Destroy (this.gameObject);
 		}
@@ -29,14 +29,14 @@ public class BulletController : MonoBehaviour {
 		if (other.gameObject.tag == "Enemy") {
 
 			ScoreText.instance.AddScore (1);
-			
+
 			Destroy (other.gameObject);
-			
+
 			this.gameObject.GetComponent<AudioSource> ().clip = myExplostion;
 			this.gameObject.GetComponent<AudioSource> ().Play ();
 		}
-//		Debug.Log ("Hello");
+		//		Debug.Log ("Hello");
 
-//		Destroy (this.gameObject);
+		//		Destroy (this.gameObject);
 	}
 }
