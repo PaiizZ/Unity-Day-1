@@ -15,7 +15,6 @@ public class SpaceshipController : MonoBehaviour {
 	public Text gameOverText;
 	public Boundary boundary;
 	void Start () {
-//		gameOverText.text = GetComponent<Text>();
 		if (instance==null) {
 			instance = this;
 		} else if (instance != this) {
@@ -25,7 +24,6 @@ public class SpaceshipController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 		if (Input.GetKeyDown(KeyCode.Space)) {
 			Instantiate (myBullet, this.gameObject.transform.position,Quaternion.identity);
 		}

@@ -11,7 +11,8 @@ public class BulletController : MonoBehaviour {
 
 
 	void Start () {
-		//		scoreText = GetComponent <Text> ();
+		Color newColor = new Color( Random.value, Random.value, Random.value, 1.0f );
+		gameObject.GetComponent<Renderer> ().material.color = newColor;
 		scoreText = ScoreText.instance;
 		score = 0;
 	}
@@ -35,8 +36,5 @@ public class BulletController : MonoBehaviour {
 			this.gameObject.GetComponent<AudioSource> ().clip = myExplostion;
 			this.gameObject.GetComponent<AudioSource> ().Play ();
 		}
-		//		Debug.Log ("Hello");
-
-		//		Destroy (this.gameObject);
 	}
 }

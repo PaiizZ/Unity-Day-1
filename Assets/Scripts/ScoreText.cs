@@ -8,10 +8,9 @@ public class ScoreText : MonoBehaviour {
 
 	public int score = 0;
 
-
-
 	// Use this for initialization
 	void Start () {
+//		DontDestroyOnLoad (this.gameObject);
 		if (instance==null) {
 			instance = this;
 		} else if (instance != this) {
@@ -33,9 +32,5 @@ public class ScoreText : MonoBehaviour {
 		score += val;
 		setText (score+"");
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }

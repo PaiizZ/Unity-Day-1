@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour {
 	public AudioClip myExplostionBoom;
@@ -30,9 +31,19 @@ public class EnemyController : MonoBehaviour {
 			AudioSource.PlayClipAtPoint (myExplostionBoom, gameObject.transform.position);
 			space.gameOverText.text = "Game Over!";
 			this.restart = true;
+
+			if (PlayerPrefs.GetInt("Highscore") < ScoreText.instance.getScore() ) {
+				PlayerPrefs.SetInt ("Highscore", ScoreText.instance.getScore() );
+			}
+
 			Destroy (other.gameObject);
+			waitTime ();
+			SceneManager.LoadScene (0);
 			//			this.gameObject.GetComponent<AudioSource> ().Play ();
 		}
 
+	}
+	IEnumerator waitTime(){
+		yield return new WaitForSeconds(10);
 	}
 }
